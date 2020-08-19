@@ -1,6 +1,4 @@
 .DS_Store
 ~*
-*.jpg
-tmp
-tile
-data
+src/data
+src/tmp
