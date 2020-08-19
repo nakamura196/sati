@@ -112,13 +112,16 @@ for manifest in selections:
 
 curation = {
     "@context": [
-    "http://iiif.io/api/presentation/2/context.json",
-    "http://codh.rois.ac.jp/iiif/curation/1/context.json"
-  ],
-  "@type": "cr:Curation",
-  "@id": "https://nakamura196.github.io/sati/iiif/curaiton.json",
-  "label" : "SAT大正蔵図像DB",
-    "selections" : new_ss
+        "http://iiif.io/api/presentation/2/context.json",
+        "http://codh.rois.ac.jp/iiif/curation/1/context.json"
+    ],
+    "@type": "cr:Curation",
+    "@id": "https://nakamura196.github.io/sati/iiif/curaiton.json",
+    "label" : "SAT大正蔵図像DB",
+    "selections" : new_ss,
+    "viewingHint" : "grid",
+    "description" : "SAT大正蔵図像DB・機械学習用データセット",
+    "thumbnail" : "https://21dzk.l.u-tokyo.ac.jp/SAT/image/image01.jpg"
 }
 
 f2 = open("../docs/iiif/curation.json", 'w')
