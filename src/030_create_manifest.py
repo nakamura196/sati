@@ -49,11 +49,14 @@ for j in range(1, r_count):
 
         if not pd.isnull(value) and value != 0:
             label = label_map[i]
-            value = str(value).strip()
-            metadata.append({
-                "label" : label,
-                "value" : value
-            })
+            values = value.split(";")
+            for value in values:
+                value = str(value).strip()
+                if value != "":
+                    metadata.append({
+                        "label" : label,
+                        "value" : value
+                    })
 
     image_uri = df_item.iloc[j, 21]
 
