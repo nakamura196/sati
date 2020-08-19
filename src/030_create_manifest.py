@@ -92,11 +92,14 @@ for j in range(1, r_count):
 new_ss = []
 
 count = 1
+
+curation_uri = "https://nakamura196.github.io/sati/iiif/curation.json"
+
 for manifest in selections:
     selection = selections[manifest]
 
     new_s = {
-        "@id" : "https://nakamura196.github.io/sati/iiif/curaiton.json/range"+str(count),
+        "@id" : curation_uri + "/range"+str(count),
         "@type": "sc:Range",
         "members" : selection["members"],
         "within" : {
@@ -116,8 +119,8 @@ curation = {
         "http://codh.rois.ac.jp/iiif/curation/1/context.json"
     ],
     "@type": "cr:Curation",
-    "@id": "https://nakamura196.github.io/sati/iiif/curaiton.json",
-    "label" : "SAT大正蔵図像DB",
+    "@id": curation_uri,
+    "label" : "SAT大正蔵図像DB・機械学習用データセット",
     "selections" : new_ss,
     "viewingHint" : "grid",
     "description" : "SAT大正蔵図像DB・機械学習用データセット",
