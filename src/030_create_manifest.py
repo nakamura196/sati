@@ -84,7 +84,7 @@ for j in range(1, r_count):
         "@type" : "sc:Canvas",
         "label" : df_item.iloc[j, 0],
         "metadata" : metadata,
-        "thumbnail" : image_uri
+        "thumbnail" : image_uri.replace("/full/0/", "/200,/0/")
     }
 
     selection["members"].append(member)
